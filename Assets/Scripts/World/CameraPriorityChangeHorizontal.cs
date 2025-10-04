@@ -1,17 +1,21 @@
 using UnityEngine;
 using Unity.Cinemachine;
 
-public class SecretRoom1Camera : MonoBehaviour
+public class CameraPriorityChangeHorizontal: MonoBehaviour
 {
     public CinemachineCamera leftCamera;
     public CinemachineCamera rightCamera;
+    private BoxCollider2D triggerZone;
+    private void Awake()
+    {
+        triggerZone = GetComponent<BoxCollider2D>();
+    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            // From left of collider to right
-            if (collision.transform.position.x > transform.position.x)
+            if (collision.transform.position.x > triggerZone.bounds.center.x)
             {
                 rightCamera.Priority = 10;
                 leftCamera.Priority = 5;

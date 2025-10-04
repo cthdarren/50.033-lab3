@@ -66,20 +66,14 @@ public class BossPocAI: MonoBehaviour
 
     void DetectPlayer()
     {
-        Debug.Log(currentPhase);
         if (Vector3.Distance(transform.position, player.transform.position) <= detectionRange)
         {
             currentPhase = Phase.Charge;
-            Debug.Log(currentPhase);
         }
     }
 
     void StartCharge()
     {
-        //Debug.Log("Charge");
-        //isCharging = true;
-        //// Charge toward player or environment object
-        //chargeTarget = player.position;
         StartCoroutine(ChargeRoutine());
     }
 
@@ -88,7 +82,6 @@ public class BossPocAI: MonoBehaviour
         isCharging = true;
 
         // 1. Wind-up
-        Debug.Log("Winding up...");
         yield return new WaitForSeconds(2);
 
         // 2. Determine target based on fixed distance in direction of player
