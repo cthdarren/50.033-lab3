@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b71627858022e4cb8d0eaac076fe78, type: 3}
+  m_Name: SoundLibrary
+  m_EditorClassIdentifier: 
+  soundEffects:
+  - groupID: MenuItemHover
+    audioClips:
+    - {fileID: 8300000, guid: 97e75ad564f53294994986cb19863329, type: 3}
+  - groupID: MenuItemClick
+    audioClips:
+    - {fileID: 8300000, guid: 0e8901094bf2c234da7473b7a3f42ba2, type: 3}

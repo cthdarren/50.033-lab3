@@ -4,4 +4,4 @@ using UnityEngine;
 
 
 [CreateAssetMenu]
-public class AudioGameEvent : GameEvent<AudioClip>{}
+public class PlayAudioClipGameEvent : GameEvent<string>{}
