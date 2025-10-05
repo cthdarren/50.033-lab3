@@ -18,4 +18,4 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 97e75ad564f53294994986cb19863329, type: 3}
   - groupID: MenuItemClick
     audioClips:
-    - {fileID: 8300000, guid: 0e8901094bf2c234da7473b7a3f42ba2, type: 3}
+    - {fileID: 8300000, guid: eddac90435130da4287f24863aff7330, type: 3}

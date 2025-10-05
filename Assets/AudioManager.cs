@@ -11,9 +11,4 @@ public class AudioManager : MonoBehaviour
         AudioClip audioClip = soundLibrary.GetClipFromName(soundEffectName);
         audioSource.PlayOneShot(audioClip);
     }
-
-    public void Bruh(string soundEffectName)
-    {
-        Debug.Log("Playing audio clip" + soundEffectName);
-    }
 }
