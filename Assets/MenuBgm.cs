@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class MenuBgm : MonoBehaviour
@@ -23,9 +22,6 @@ public class MenuBgm : MonoBehaviour
     private void Update()
     {
         // 1 second before current clip ends
-
-        Debug.Log(AudioSettings.dspTime);
-        Debug.Log(nextClipStartTime);
         if (AudioSettings.dspTime > nextClipStartTime - 1) { 
             PlayScheduledClip();
         }
