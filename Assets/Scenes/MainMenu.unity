@@ -11276,11 +11276,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSources:
-  - {fileID: 2132003130}
   - {fileID: 2132003132}
+  - {fileID: 2132003130}
   introClip: {fileID: 8300000, guid: 016c1e6a9e73515409e77e1c4d58ceac, type: 3}
   loopClip: {fileID: 8300000, guid: be60ee59cde414d4ba2e55ff219d5df5, type: 3}
-  audioToggle: 0
+  sourceToggle: 0
 --- !u!82 &2132003132
 AudioSource:
   m_ObjectHideFlags: 0

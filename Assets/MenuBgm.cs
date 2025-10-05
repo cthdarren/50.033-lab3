@@ -6,38 +6,35 @@ public class MenuBgm : MonoBehaviour
     [SerializeField] private AudioClip introClip;
     [SerializeField] private AudioClip loopClip;
     private AudioClip currentClip;
-    [SerializeField] private int audioToggle = 0;
+    [SerializeField] private int sourceToggle = 0;
     private double nextClipStartTime;
     private double clipDuration;
 
     // Do NOT call in awake
     private void Start()
     {
-        nextClipStartTime = AudioSettings.dspTime + 1; // t + 1
+        nextClipStartTime = AudioSettings.dspTime + 1;
         SetCurrentClip(introClip);
-        PlayScheduledClip();
+        ScheduleClipToPlayOnNextClipStartTime();
         SetCurrentClip(loopClip);
     }
 
     private void Update()
     {
-        // 1 second before current clip ends
         if (AudioSettings.dspTime > nextClipStartTime - 1) { 
-            PlayScheduledClip();
+            ScheduleClipToPlayOnNextClipStartTime();
         }
     }
 
-    private void PlayScheduledClip()
+    private void ScheduleClipToPlayOnNextClipStartTime()
     {
-        audioSources[audioToggle].clip = currentClip;
-        // schedule this clip to play at the next timestamp 
-        audioSources[audioToggle].PlayScheduled(nextClipStartTime); 
+        audioSources[sourceToggle].clip = currentClip;
+        audioSources[sourceToggle].PlayScheduled(nextClipStartTime); 
 
-        // calcualte the duration of the newly scheduled clip
         clipDuration = (double)currentClip.samples / currentClip.frequency;
         nextClipStartTime += clipDuration;
 
-        audioToggle = 1 - audioToggle; // (1-0) = 1,  (1-1) = 0;
+        sourceToggle = 1 - sourceToggle; // (1-0) = 1,  (1-1) = 0;
     }
 
     private void SetCurrentClip(AudioClip newClip)
