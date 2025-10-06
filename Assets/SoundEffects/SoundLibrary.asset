@@ -19,3 +19,6 @@ MonoBehaviour:
   - groupID: MenuItemClick
     audioClips:
     - {fileID: 8300000, guid: eddac90435130da4287f24863aff7330, type: 3}
+  - groupID: HeavyLanding
+    audioClips:
+    - {fileID: 8300000, guid: 07e1d9235fe3fc843b40c30bd5f0cadf, type: 3}

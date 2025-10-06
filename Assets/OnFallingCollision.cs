@@ -5,6 +5,8 @@ public class OnFallingCollision : MonoBehaviour
 {
     [SerializeField] private Collider2D fallCollider;
     [SerializeField] private CinemachineImpulseSource impulseSource;
+    [SerializeField] private PlayAudioClipGameEvent playAudioClipGameEvent;
+    [SerializeField] private SimpleGameEvent onLandGameEvent;
 
     private void Start()
     {
@@ -16,6 +18,8 @@ public class OnFallingCollision : MonoBehaviour
         {
             impulseSource.GenerateImpulseWithForce(0.3f);
             fallCollider.enabled = false;
+            playAudioClipGameEvent.Raise("HeavyLanding");
+            onLandGameEvent.Raise();
         }
     }
 }

@@ -6,6 +6,7 @@ public class BGMManager : MonoBehaviour
     public AudioSource actionBgm;
 
     [SerializeField] private float crossFadeDuration = 2f;
+    private bool fading = false; 
 
     private void Start()
     {
@@ -13,21 +14,32 @@ public class BGMManager : MonoBehaviour
         calmBgm.Pause();
         actionBgm.Play();
         actionBgm.Pause();
-        if (calmBgm != null) calmBgm.Play();
+    }
+    public void PlayBgm()
+    {
+        calmBgm.Play();
     }
 
     public void OnAggro()
     {
+        Debug.Log("Aggroed");
         CrossFade(calmBgm, actionBgm, crossFadeDuration);
     }
 
     public void OnDeAggro()
     {
+        Debug.Log("Deaggroed");
         CrossFade(actionBgm, calmBgm, crossFadeDuration);
     }
 
     private void CrossFade(AudioSource fadeOutSource, AudioSource fadeInSource, float crossFadeSeconds)
     {
+        if (fading)
+        {
+            StopAllCoroutines();
+            fading = false;
+        }
+        fading = true;
         StartCoroutine(CrossFadeCoroutine(fadeOutSource, fadeInSource, crossFadeSeconds));
     }
 
@@ -42,6 +54,7 @@ public class BGMManager : MonoBehaviour
         float startVolOut = fadeOutSource.volume;
         float startVolIn = fadeInSource.volume;
 
+        Debug.Log("Lerping!");
         while (time < duration)
         {
             time += Time.deltaTime;
@@ -52,9 +65,11 @@ public class BGMManager : MonoBehaviour
 
             yield return null;
         }
+        Debug.Log("Lerped!");
 
         fadeOutSource.Stop();
         fadeOutSource.volume = startVolOut; // reset for future use
         fadeInSource.volume = 0.8f;
+        fading = false;
     }
 }
