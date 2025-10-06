@@ -1,30 +1,19 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader: MonoBehaviour
 {
+    [SerializeField] private Animator animator;
+    [SerializeField] private float transitionTime = 1f;
     public void ChangeCurrentScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        StartCoroutine(LoadLevel(sceneName));
     }
-
-    public void PlayAudio(string soundEffectName)
+    IEnumerator LoadLevel(string sceneName)
     {
-        Debug.Log("Playing audio clip" + soundEffectName);
-    }
-}
-
-
-public class SceneenenManager : MonoBehaviour
-
-{
-    [SerializeField] private SoundLibrary soundLibrary;
-    [SerializeField] private AudioSource audioSource;
-
-    public void PlayAudio(string soundEffectName)
-    {
-        Debug.Log("Playing audio clip" + soundEffectName);
-        AudioClip audioClip = soundLibrary.GetClipFromName(soundEffectName);
-        audioSource.PlayOneShot(audioClip);
+        animator.SetTrigger("TransitionStart");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -249,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineFollow
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 2, y: 1, z: 1}
+    PositionDamping: {x: 2, y: 0, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -916,7 +916,7 @@ Transform:
   m_GameObject: {fileID: 301924010}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -104.13, y: 269.34, z: -10}
+  m_LocalPosition: {x: -108.01048, y: 268.60208, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1661,6 +1661,67 @@ MonoBehaviour:
   startpos: 0
   cam: {fileID: 301924010}
   parallaxEffect: 1.2
+--- !u!1001 &539265405
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1641813003984035528, guid: ca19100da5ec52b44993f1048e4c0305, type: 3}
+      propertyPath: m_Name
+      value: SceneManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641813003984035528, guid: ca19100da5ec52b44993f1048e4c0305, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337158913920205939, guid: ca19100da5ec52b44993f1048e4c0305, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 358.83807
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337158913920205939, guid: ca19100da5ec52b44993f1048e4c0305, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 183.88562
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337158913920205939, guid: ca19100da5ec52b44993f1048e4c0305, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.2598624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337158913920205939, guid: ca19100da5ec52b44993f1048e4c0305, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337158913920205939, guid: ca19100da5ec52b44993f1048e4c0305, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337158913920205939, guid: ca19100da5ec52b44993f1048e4c0305, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337158913920205939, guid: ca19100da5ec52b44993f1048e4c0305, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337158913920205939, guid: ca19100da5ec52b44993f1048e4c0305, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337158913920205939, guid: ca19100da5ec52b44993f1048e4c0305, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337158913920205939, guid: ca19100da5ec52b44993f1048e4c0305, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca19100da5ec52b44993f1048e4c0305, type: 3}
 --- !u!1 &568472463
 GameObject:
   m_ObjectHideFlags: 0
@@ -10293,7 +10354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineFollow
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 2, y: 1, z: 1}
+    PositionDamping: {x: 2, y: 0, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -23207,7 +23268,7 @@ AudioSource:
   m_GameObject: {fileID: 1288307090}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2939522155075054862, guid: ed43a9351374c7f4287732670809ffd0, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 756eb8ea8c74d3249bf9e79a535db134, type: 3}
   m_PlayOnAwake: 1
@@ -24247,7 +24308,7 @@ AudioSource:
   m_GameObject: {fileID: 1753409451}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7535182353506312273, guid: ed43a9351374c7f4287732670809ffd0, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 56faff43bd4910446ace6fc35a4daf20, type: 3}
   m_PlayOnAwake: 0
@@ -24901,7 +24962,7 @@ AudioSource:
   m_GameObject: {fileID: 1916682551}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7535182353506312273, guid: ed43a9351374c7f4287732670809ffd0, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 51c89232604166444ace433c0900e8cc, type: 3}
   m_PlayOnAwake: 1
@@ -134576,6 +134637,7 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 539265405}
   - {fileID: 593616986}
   - {fileID: 301924014}
   - {fileID: 1692563293}

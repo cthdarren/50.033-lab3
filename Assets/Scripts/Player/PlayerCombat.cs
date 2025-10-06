@@ -57,10 +57,8 @@ public class PlayerCombat : MonoBehaviour
         {
             foreach (Collider2D collider in results)
             {
-                Debug.Log("Attacked enemy");
                 if (collider && collider.CompareTag("Enemy"))
                 {
-                    Debug.Log(collider);
                     EnemyAI enemy = collider.GetComponent<EnemyAI>();
                     if (enemy != null)
                     {

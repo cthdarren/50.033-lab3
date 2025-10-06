@@ -7,7 +7,6 @@ public class AudioManager : MonoBehaviour
 
     public void PlayAudio(string soundEffectName)
     {
-        Debug.Log("Playing audio clip" + soundEffectName);
         AudioClip audioClip = soundLibrary.GetClipFromName(soundEffectName);
         audioSource.PlayOneShot(audioClip);
     }
