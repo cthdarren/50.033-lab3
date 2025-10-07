@@ -10,18 +10,18 @@ public class EnemyAI : MonoBehaviour
     public GameObject attackHitbox;
 
     public TrailRenderer dashTrail;
-    private Rigidbody2D rb;
-    private Animator animator;
-    private Transform playerTransform;
-    private enum AIState { Idle, Chasing, Attacking, Dashing }
-    private AIState currentState;
+    protected Rigidbody2D rb;
+    protected Animator animator;
+    protected Transform playerTransform;
+    protected enum AIState { Idle, Chasing, Attacking, Dashing }
+    protected AIState currentState;
     private AIState lastState;
 
     private Coroutine dashCoroutine;
 
-    private bool isAttacking = false;
+    protected bool isAttacking = false;
     private float currentHealth;
-    private float attackTimer;
+    protected float attackTimer;
     private float dashTimer;
     private bool isDead = false;
     private int attackStateHash;
@@ -132,7 +132,7 @@ public class EnemyAI : MonoBehaviour
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
 
-    private void AttackState()
+    protected virtual void AttackState()
     {
         if (!isAttacking)
         {
