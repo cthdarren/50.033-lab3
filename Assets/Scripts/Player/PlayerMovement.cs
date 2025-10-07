@@ -6,22 +6,23 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public PlayerInput input;
     public Rigidbody2D rb;
+    [SerializeField] private PerfectDodge perfectDodge;
     [SerializeField] private BoolVariable isInvincible;
-    [SerializeField] private BoolVariable isDashing;
     [SerializeField] private BoolVariable isGrounded;
     [SerializeField] private BoolVariable isJumping;
+    [SerializeField] private BoolVariable isDashing;
     [SerializeField] private BoolVariable isMovementDisabled;
-    [SerializeField] private FloatVariable dashDuration;
-    [SerializeField] private FloatVariable dashForce;
     [SerializeField] private FloatVariable jumpForce;
-    [SerializeField] private FloatVariable dashCooldown;
-    [SerializeField] private FloatVariable dashCooldownTimer;
     [SerializeField] private FloatVariable fallingGravityScale;
     [SerializeField] private FloatVariable jumpHangTimeThreshold;
     [SerializeField] private FloatVariable jumpHangGravityScale;
     [SerializeField] private FloatVariable maxFallSpeed;
     [SerializeField] private FloatVariable defaultGravityScale;
     [SerializeField] private FloatVariable moveSpeed;
+    [SerializeField] private FloatVariable dashDuration;
+    [SerializeField] private FloatVariable dashForce;
+    [SerializeField] private FloatVariable dashCooldown;
+    [SerializeField] private FloatVariable dashCooldownTimer;
 
     public float moveDirectionVector = 1;
 
@@ -132,8 +133,11 @@ public class PlayerMovement : MonoBehaviour
             isDashing.Value = true;
             isInvincible.Value = true;
             dashCooldownTimer.Value = dashCooldown.Value;
+            perfectDodge.DropHitbox();
             animator.SetTrigger("Dash");
-            //rb.linearVelocity = Vector2.zero;
+            // enable hitbox that is on current player fixed to world space for perfectDodgeWindow seconds
+            // hitbox ontrigger2D separate script
+            // move hitbox back to follow player hitbox
             rb.linearVelocity = moveDirectionVector * Vector2.right * dashForce.Value;
             StartCoroutine(StopTeleportDash());
         }
@@ -148,27 +152,4 @@ public class PlayerMovement : MonoBehaviour
         isDashing.Value = false;
         isInvincible.Value = false;
     }
-    //public void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (
-    //        collision.gameObject.CompareTag("Ground") ||
-    //        collision.gameObject.CompareTag("Platform")
-    //    )
-    //    {
-    //        playerData.isJumping = false;
-    //        playerData.isGrounded = true;
-    //    }
-    //}
-
-    //public void OnCollisionExit2D(Collision2D collision)
-    //{
-    //    if (
-    //        collision.gameObject.CompareTag("Ground") ||
-    //        collision.gameObject.CompareTag("Platform")
-    //    )
-    //    {
-    //        playerData.isGrounded = false;
-    //    }
-    //}
-
 }

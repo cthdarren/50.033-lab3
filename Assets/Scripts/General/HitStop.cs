@@ -5,25 +5,16 @@ public class HitStop : MonoBehaviour
 {
     [SerializeField] private BoolVariable isWaiting; 
     [SerializeField] private FloatVariable hitStopDuration; 
+    [SerializeField] private FloatFloatGameEvent alterTimeGameEvent; 
 
     public void OnPlayerAttackEnemy()
     {
-        Stop(hitStopDuration.Value);
+        Debug.Log("Enemy attacked, stopping for " + hitStopDuration.Value.ToString());
+        alterTimeGameEvent.Raise(0f, hitStopDuration.Value);
+        //Stop(hitStopDuration.Value);
     }
 
     public void Stop(float duration_seconds)
     {
-        if (isWaiting) return;
-        StartCoroutine(WaitAsync(duration_seconds));
-    }
-
-    public IEnumerator WaitAsync(float duration_seconds)
-    {
-        isWaiting.Value = true;
-        Time.timeScale = 0f;
-        yield return null;
-        yield return new WaitForSecondsRealtime(duration_seconds);
-        Time.timeScale = 1f;
-        isWaiting.Value = false ;
     }
 }

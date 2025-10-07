@@ -21,13 +21,5 @@ public class PlayerConstants: ScriptableObject
     public float hitStopDuration = 0.2f;
     public float attackHitboxDelay = 0.2f;
     public float attackHitboxDuration = 0.2f;
-
-    // States
-    public bool isJumping = false;
-    public bool isDashing = false;
-    public bool isGrounded = true;
-    public bool isInvincible = false;
-    public bool isMovementDisabled = false;
-    public bool isAggroed = false;
 }
 

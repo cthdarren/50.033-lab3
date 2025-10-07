@@ -22,3 +22,6 @@ MonoBehaviour:
   - groupID: HeavyLanding
     audioClips:
     - {fileID: 8300000, guid: 07e1d9235fe3fc843b40c30bd5f0cadf, type: 3}
+  - groupID: SlowMo
+    audioClips:
+    - {fileID: 8300000, guid: bdfb0748c037a80489bb06df2796402a, type: 3}
