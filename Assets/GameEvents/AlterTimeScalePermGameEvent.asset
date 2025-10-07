@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 806abb29421918046b3084ea033d1933, type: 3}
-  m_Name: HitStopDuration
+  m_Script: {fileID: 11500000, guid: acb9082744ef1474b9b3f8afa84c4cef, type: 3}
+  m_Name: AlterTimeScalePermGameEvent
   m_EditorClassIdentifier: 
-  Value: 0.08

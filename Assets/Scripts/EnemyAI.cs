@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    [SerializeField] DamageFlash damageFlash;
     [SerializeField] GameEvent onAggroPlayer;
     [SerializeField] GameEvent onDeaggroPlayer;
     public EnemyData enemyData;
@@ -261,6 +262,7 @@ public class EnemyAI : MonoBehaviour
         StopDashTrail();
 
         currentHealth -= damage;
+        damageFlash.CallDamageFlash();
 
         if (currentHealth <= 0)
         {

@@ -8,7 +8,9 @@ public class PlayerCombat : MonoBehaviour
     public Collider2D attackHitbox;
     public PlayerInput input;
     public GameEvent attackEvent;
+    [SerializeField] private FloatFloatGameEvent alterTimeGameEvent; 
     [SerializeField] private FloatVariable hp;
+    [SerializeField] private FloatVariable hitStopDuration;
     [SerializeField] private BoolVariable isInvincible;
     [SerializeField] private BoolVariable isDashing;
     [SerializeField] private FloatVariable damage;
@@ -62,7 +64,7 @@ public class PlayerCombat : MonoBehaviour
                     EnemyAI enemy = collider.GetComponent<EnemyAI>();
                     if (enemy != null)
                     {
-                        attackedEnemy.Raise();
+                        alterTimeGameEvent.Raise(0f, hitStopDuration.Value);
                         enemy.TakeDamage(damage.Value);
                     }
                 }
