@@ -638,7 +638,7 @@ PrefabInstance:
     - target: {fileID: 4071460554238333667, guid: d1e8eb4e642f642b8b58c55bdbe493ed, type: 3}
       propertyPath: attackHitbox
       value: 
-      objectReference: {fileID: 1155222218}
+      objectReference: {fileID: 0}
     - target: {fileID: 4071460554238333667, guid: d1e8eb4e642f642b8b58c55bdbe493ed, type: 3}
       propertyPath: onAggroPlayer
       value: 
@@ -10922,7 +10922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1155222219}
   - component: {fileID: 1155222220}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11347,7 +11347,7 @@ AudioSource:
   m_GameObject: {fileID: 1205525772}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 7463152678806700677, guid: ed43a9351374c7f4287732670809ffd0, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 10bf5c800e3a3a74d955872de6439f39, type: 3}
   m_PlayOnAwake: 0
