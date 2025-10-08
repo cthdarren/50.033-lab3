@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 806abb29421918046b3084ea033d1933, type: 3}
-  m_Name: Damage
+  m_Script: {fileID: 11500000, guid: de0369351d6cc3e48aecef4906d5fb8f, type: 3}
+  m_Name: CollectCollectible
   m_EditorClassIdentifier: 
-  Value: 4

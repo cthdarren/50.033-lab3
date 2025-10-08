@@ -5,7 +5,7 @@ public abstract class NPC : MonoBehaviour, IInteractable
 {
     [SerializeField] private SpriteRenderer _interactSprite;
     [SerializeField] private Transform _playerTransform;
-    public DevConsole devConsole;
+    public FloatVariable npcInteractableRange;
 
     void Start()
     {
@@ -33,6 +33,6 @@ public abstract class NPC : MonoBehaviour, IInteractable
 
     private bool IsWithinInteractDistance()
     {
-        return Vector2.Distance(_playerTransform.position, transform.position) < devConsole.npcInteractableRange;
+        return Vector2.Distance(_playerTransform.position, transform.position) < npcInteractableRange.Value;
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInput : MonoBehaviour
 {
+    public InputAction pauseInput;
     public InputAction wasdInputVector;
     public InputAction attackInput;
     public InputAction jumpInput;
@@ -13,5 +14,6 @@ public class PlayerInput : MonoBehaviour
         attackInput = InputSystem.actions.FindAction("Attack");
         jumpInput = InputSystem.actions.FindAction("Jump");
         dashInput = InputSystem.actions.FindAction("Sprint");
+        pauseInput = InputSystem.actions.FindAction("Pause");
     }
 }

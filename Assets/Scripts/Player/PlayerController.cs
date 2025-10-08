@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
 
     public void Update()
     {
+        if (playerInput.pauseInput.WasPressedThisFrame())
+        {
+            //Pause the game
+        }
         playerCombat.HandleCombat();
         playerMovement.HandleMovement();
     }

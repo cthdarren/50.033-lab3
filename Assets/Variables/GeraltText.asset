@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
   speakerName: Geralt
   paragraphs:
-  - Hey, have you seen my daughter Ciri?
-  - Actually nevermind, that's not important. Are those Gwent cards in your pocket?
-  - Do you play Gwent?
-  - Let's play a round of Gwent.
+  - Thanks for the gwent game the other time.
+  - I need some help killing a monster on the far side of this area.
+  - I can't let Yennefer see me
+  - Also, can you
