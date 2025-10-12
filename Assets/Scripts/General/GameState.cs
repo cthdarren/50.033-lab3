@@ -7,6 +7,7 @@ public class GameState : ScriptableObject
     public int maxCollectibles = 3;
     public int numCollectibles = 0;
     public bool bossDefeated = false;
+    public bool doubleJump = false;
     public string currentScene;
     public string currentCameraName;
     public DateTime saveStartTime;
@@ -29,6 +30,7 @@ public class GameState : ScriptableObject
             maxCollectibles=maxCollectibles,
             numCollectibles=numCollectibles,
             bossDefeated=bossDefeated,
+            doubleJump=doubleJump,
             currentScene=currentScene,
             currentCameraName=currentCameraName,
             saveStartTime=saveStartTime
@@ -42,6 +44,7 @@ public struct GameStateSerialized
     public int maxCollectibles;
     public int numCollectibles;
     public bool bossDefeated;
+    public bool doubleJump;
     public string currentScene;
     public string currentCameraName;
     public DateTime saveStartTime;
