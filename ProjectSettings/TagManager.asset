@@ -10,6 +10,7 @@ TagManager:
   - Water
   - DodgeHitbox
   - EnemyAttackHitbox
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
