@@ -10,6 +10,7 @@ public class SceneLoader: MonoBehaviour
     {
         StartCoroutine(LoadLevel(sceneName));
     }
+
     IEnumerator LoadLevel(string sceneName)
     {
         animator.SetTrigger("TransitionStart");
@@ -17,3 +18,4 @@ public class SceneLoader: MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 }
+
