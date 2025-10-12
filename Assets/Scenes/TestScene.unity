@@ -1864,7 +1864,7 @@ Transform:
   m_GameObject: {fileID: 301924010}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -108.0107, y: 268.472, z: -10}
+  m_LocalPosition: {x: -108.00653, y: 268.472, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13678,7 +13678,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1042282105}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 14592152e6b33ac449e6eea82846b7e9, type: 2}
+        m_TargetAssemblyTypeName: IntGameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1063696712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32231,7 +32243,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1349671075}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 14592152e6b33ac449e6eea82846b7e9, type: 2}
+        m_TargetAssemblyTypeName: IntGameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1354377300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144927,7 +144951,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 647855908}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 14592152e6b33ac449e6eea82846b7e9, type: 2}
+        m_TargetAssemblyTypeName: IntGameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2087329294
 MonoBehaviour:
   m_ObjectHideFlags: 0
