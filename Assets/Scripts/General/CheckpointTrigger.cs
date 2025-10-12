@@ -13,12 +13,6 @@ public class CheckpointSaveTrigger : MonoBehaviour, IInteractable
     private float nextAllowedTime;
     private bool screenActive;
 
-    private void Reset()
-    {
-        var col = GetComponent<Collider2D>();
-        col.isTrigger = true;
-    }
-
     private void Start()
     {
         _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
