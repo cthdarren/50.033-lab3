@@ -62,6 +62,7 @@ public class SaveManager : MonoBehaviour
                 savedPlayerPosition[1],
                 savedPlayerPosition[2]
             );
+
         triggerLoadGame = false;
     }
 
