@@ -23,12 +23,29 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private FloatVariable dashForce;
     [SerializeField] private FloatVariable dashCooldown;
     [SerializeField] private FloatVariable dashCooldownTimer;
+    [SerializeField] private BoolVariable doubleJumpUnlocked;
+    [SerializeField] private int extraAirJumps = 1;
 
     public float moveDirectionVector = 1;
+
+    private int airJumpsLeft = 0;
+    private bool wasGrounded = false;
+
+    private int MaxAirJumps
+    {
+        get
+        {
+            bool hasDoubleJump = doubleJumpUnlocked != null && doubleJumpUnlocked.Value;
+            return hasDoubleJump ? extraAirJumps : 0;
+        }
+    }
+
 
     void Start()
     {
         input = GetComponent<PlayerInput>();
+        wasGrounded = isGrounded.Value;
+        airJumpsLeft = wasGrounded ? MaxAirJumps : 0;
     }
 
     public void FixedUpdate()
@@ -56,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
         // Extend air time slightly between threshold
         else if (isJumping.Value && Mathf.Abs(rb.linearVelocityY) < jumpHangTimeThreshold.Value)
             rb.gravityScale = jumpHangGravityScale.Value;
+
+        UpdateJumpState();
 
     }
 
@@ -119,8 +138,24 @@ public class PlayerMovement : MonoBehaviour
                 isJumping.Value = true;
                 isGrounded.Value = false;
             }
+            else if (airJumpsLeft > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocityX, Mathf.Max(0f, rb.linearVelocityY));
+                rb.AddForce(new Vector2(0, jumpForce.Value), ForceMode2D.Impulse);
+                isJumping.Value = true;
+                airJumpsLeft--;
+            }
         }
 
+    }
+
+    private void UpdateJumpState()
+    {
+        if (!wasGrounded && isGrounded.Value)
+        {
+            airJumpsLeft = MaxAirJumps;
+        }
+        wasGrounded = isGrounded.Value;
     }
 
     public void HandleDash()
