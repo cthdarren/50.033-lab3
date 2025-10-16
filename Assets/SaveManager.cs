@@ -8,6 +8,8 @@ public class SaveManager : MonoBehaviour
 {
     [SerializeField] private GameState gameState;
     [SerializeField] private PlayerState playerState;
+    [SerializeField] private BoolVariable doubleJumpUnlocked;
+    [SerializeField] private FloatVariable playerHp;
     [SerializeField] private ChangeSceneGameEvent changeSceneEvent;
     [SerializeField] private SaveGameData? loadedGameData;
     private bool triggerLoadGame = false;
@@ -32,6 +34,8 @@ public class SaveManager : MonoBehaviour
                 playerPositionFloatArr,
                 gameState.Serialize(),
                 playerState.Serialize(),
+                doubleJumpUnlocked.Value,
+                playerHp.Value,
                 gameState.saveStartTime
             );
 
@@ -42,6 +46,8 @@ public class SaveManager : MonoBehaviour
         triggerLoadGame = true;
         loadedGameData = ReadFromSaveFile(slot);
         if (!loadedGameData.HasValue) return;
+        doubleJumpUnlocked.Value = loadedGameData.Value.doubleJumpUnlocked;
+        playerHp.Value = loadedGameData.Value.playerHp;
         LoadGameState(loadedGameData.Value.gameState);
         changeSceneEvent.Raise(gameState.currentScene);
     }
@@ -119,12 +125,23 @@ public struct SaveGameData
 {
     public float[] playerPosition;
     public GameStateSerialized gameState;
+    public bool doubleJumpUnlocked;
+    public float playerHp;
     public PlayerStateSerialized playerState;
     public DateTime startDateTime;
 
-    public SaveGameData(float[] position, GameStateSerialized gameState, PlayerStateSerialized playerState, DateTime startDateTime)
+    public SaveGameData(
+        float[] position,
+        GameStateSerialized gameState,
+        PlayerStateSerialized playerState,
+        bool doubleJumpUnlocked,
+        float playerHp,
+        DateTime startDateTime
+        )
     {
         playerPosition = position;
+        this.doubleJumpUnlocked = doubleJumpUnlocked;
+        this.playerHp = playerHp;
         this.gameState = gameState;
         this.playerState = playerState;
         this.startDateTime = startDateTime;

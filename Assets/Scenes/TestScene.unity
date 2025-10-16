@@ -464,7 +464,7 @@ Transform:
   m_GameObject: {fileID: 73833027}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -103.80208, y: 263.43448, z: -10}
+  m_LocalPosition: {x: -38.69208, y: 23.50449, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -523,7 +523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
     Enabled: 1
-    m_Value: 5
+    m_Value: 10
   OutputChannel: 2
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -1430,7 +1430,7 @@ Transform:
   m_GameObject: {fileID: 262522990}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -103.80208, y: 263.43448, z: -10}
+  m_LocalPosition: {x: -38.69208, y: 23.50449, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1896,7 +1896,7 @@ Transform:
   m_GameObject: {fileID: 301924010}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -108.0107, y: 268.472, z: -10}
+  m_LocalPosition: {x: -43.5149, y: 28.54208, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3139,7 +3139,7 @@ Transform:
   m_GameObject: {fileID: 543684863}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6, y: -2.13, z: -0.7418426}
+  m_LocalPosition: {x: 91.48, y: -265.97, z: -0.7418426}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3199,7 +3199,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.1875}
+    oldSize: {x: 1.125, y: 1.1875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11715,6 +11715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 786896102}
   - component: {fileID: 786896103}
+  - component: {fileID: 786896104}
   m_Layer: 8
   m_Name: AttackHitbox
   m_TagString: EnemyAttackHitbox
@@ -11783,6 +11784,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.55, y: 0.25}
   m_EdgeRadius: 0
+--- !u!114 &786896104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786896101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fbf0791d0f65470aa56fa232bbfc719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: 1c5c38e80d1fe4ab7855f1e91e14291f, type: 2}
 --- !u!1 &788472760
 GameObject:
   m_ObjectHideFlags: 0
@@ -14078,7 +14092,7 @@ Transform:
   m_GameObject: {fileID: 1089689187}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -52.402077, y: 63.334473, z: -10}
+  m_LocalPosition: {x: 12.70792, y: -176.59552, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15034,7 +15048,7 @@ Transform:
   m_GameObject: {fileID: 1218003336}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.302078, y: 8.834473, z: -10}
+  m_LocalPosition: {x: 44.80792, y: -231.09552, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15074,7 +15088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
     Enabled: 1
-    m_Value: 10
+    m_Value: 5
   OutputChannel: 2
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -34655,7 +34669,7 @@ Transform:
   m_GameObject: {fileID: 1895536810}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -108.85, y: 266.47, z: 0}
+  m_LocalPosition: {x: -43.74, y: 26.54, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34871,6 +34885,7 @@ MonoBehaviour:
   isDashing: {fileID: 11400000, guid: 046cd9d57300cdc4192fbc388b0c4c84, type: 2}
   damage: {fileID: 11400000, guid: 6598dd411413a4341b2bd3669b708708, type: 2}
   attackedEnemy: {fileID: 11400000, guid: 209eb751006fe8a4d9c59717dc12b508, type: 2}
+  loadGameFromSlot: {fileID: 11400000, guid: fbc146a6a6eccd34fab114c06805b339, type: 2}
 --- !u!114 &1895536822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145428,6 +145443,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameState: {fileID: 11400000, guid: f9b2519e69f311843813a5e182e1c810, type: 2}
   playerState: {fileID: 11400000, guid: cbc9e55b7c88ddd4ebc59101b190e90e, type: 2}
+  doubleJumpUnlocked: {fileID: 11400000, guid: ee469c331a0b24416b35049da12509da, type: 2}
+  playerHp: {fileID: 11400000, guid: 5ecb189e5addb2e41bd74162da9caadc, type: 2}
   changeSceneEvent: {fileID: 11400000, guid: fe36ab61b2f182546b90d430cc7a9355, type: 2}
 --- !u!4 &2099673474
 Transform:

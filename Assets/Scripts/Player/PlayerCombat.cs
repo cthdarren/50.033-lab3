@@ -15,12 +15,13 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private BoolVariable isDashing;
     [SerializeField] private FloatVariable damage;
     [SerializeField] private GameEvent attackedEnemy;
+    [SerializeField] private IntGameEvent loadGameFromSlot;
 
     public void HandleCombat()
     {
         if (isDead())
         {
-            // Play death animation + ui screen
+            loadGameFromSlot.Raise(0);
         }
         if (input.attackInput.WasPressedThisFrame())
         {
@@ -29,7 +30,7 @@ public class PlayerCombat : MonoBehaviour
     }
     public bool isDead()
     {
-        return hp.Value < 0;
+        return hp.Value <= 0;
     }
 
     public void TakeDamage(float damage)
